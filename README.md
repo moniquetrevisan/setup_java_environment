@@ -42,6 +42,8 @@ variáveis de ambiente
 - M2_HOME = c:\dev\soft\apache-maven-3.5.2
 - M2_REPO = c:\dev\soft\.m2\repository
 
+### GIT
+Para conseguirmos organizar os códigos, e fazer controle de versão vamos utilizar o git como ferramenta de controle de versão. Se você não sabe nada sobre isso, ou precisa de ajudar para configurar o git, eu aconselho muito que você assista esse curso do udacity: https://www.udacity.com/course/how-to-use-git-and-github--ud775 
 
 ### IDE Eclipse
 Depois de termos o Java e o Maven na nossa máquina, vamos precisar de uma IDE para codificar. A mais utilizada comercialmente (de acordo com a minha experiência, claro) é o Eclipse.
