@@ -7,17 +7,47 @@
 - c:\dev\soft -> Instaladores e programas
   
 ### Java
-variáveis de ambiente
+Fazer download dos pacotes do java, e para desenvolver, precisamos ter o runtime do Java (conhecido como jre) e também os pacotes de desenvolvedor que estão dentro da jdk (Java Development Kit) 
+
+Quando fazemos o download da jdk, os pacotes de runtime (jre) estão incluídos. 
+Download: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+Faça o download da versão x64
+
+IMPORTANTE: Caso você já tenha alguma versão de Java instalado, eu aconselho desinstalar e deixar somente a mais atual, pois as vezes acontece alguns problemas de ambiente que são relacionados a diferentes versões de Java na máquina. 
+O melhor jeito de você instalar o Java, na verdade é apenas pegar os zips que serão obtidos no download, e fazer os apontamentos de onde está o Java através de variáveis de ambiente. Isso vale, inclusive, para o linux. 
+
+As variáveis de ambiente necessárias são:
 - JAVA_HOME = c:\dev\soft\Java\jdk1.8.0_171
 - JAVA_TOOL_OPTIONS = -Dfile.encoding=UTF8
 - JRE_HOME = c:\dev\soft\Java\jre1.8.0_171
 
+Após criar as variáveis de ambiente, abra um cmd e digite o comando "java -version"
+A saída será alguma coisa parecida com isso:
+C:\Users\mvolpe>java -version
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8
+java version "1.8.0_171"
+Java(TM) SE Runtime Environment (build 1.8.0_171-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
+
+
 ### Maven
+A próxima tecnologia que vamos utilizar é o Maven.
+O maven é basicamente uma ferramenta que organiza as dependências (imports) do seu projeto, compila o código e gera os diferentes tipos de binários que temos em Java (war, jar, etc).
+Para saber mais sobre isso, acesse o link deles: https://maven.apache.org/what-is-maven.html 
+
+Para instalar ele, precisamos apenas fazer o download dele, e apontarmos sua localização via variáveis de ambiente.
+Para isso, vamos precisar da variável que indica seu caminho (M2_HOME) e da variável que vai indicar onde ele vai organizar o repositório local (M2_REPO).
+
 variáveis de ambiente
 - M2_HOME = c:\dev\soft\apache-maven-3.5.2
 - M2_REPO = c:\dev\soft\.m2\repository
-      
+
+
 ### IDE Eclipse
+Depois de termos o Java e o Maven na nossa máquina, vamos precisar de uma IDE para codificar. A mais utilizada comercialmente (de acordo com a minha experiência, claro) é o Eclipse.
+Existem várias versões e tipos de Eclipse, utilizaremos o Eclipse para programadores Java para Web Developers (Eclipse Java EE IDE for Web Developers.)
+A versão que estou utilizando é: Version: Oxygen.3a Release (4.7.3a) - caso seja do projeto Exygen pode fazer o download de alguma versão mais atual caso não encontre exatamente essa, sem problemas. 
+
 acertar a instalação do java e apontar sempre para a JDK
 - Preferences > Java > Installed JREs > Add... > caminho da sua JAVA_HOME
 acertar a configuração do maven para ele não usar o padrão dele
