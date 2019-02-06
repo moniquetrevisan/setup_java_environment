@@ -133,3 +133,11 @@ link simbólico
 
 ### JVM ARGS Exemplos
 -Dcatalina.base="C:\workspace\pcopuma_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0" -Dcatalina.home="C:\dev\jws-3.0\share\apache-tomcat-8.0.18" -Dwtp.deploy="C:\workspace\pcopuma_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps" -Djava.endorsed.dirs="C:\dev\jws-3.0\share\apache-tomcat-8.0.18\endorsed" -Dspring.config.location="C:\dev\pcopuma\cfg\application.properties"   -Denvironment=DEV
+
+### Agile Coach Atlassian
+Link para um entendimento completo sobre scrum e agile
+https://br.atlassian.com/agile/scrum 
+
+Outras referências:
+https://www.scrumguides.org/scrum-guide.html 
+
