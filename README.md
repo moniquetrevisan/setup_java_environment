@@ -104,8 +104,8 @@ service:jmx:jmxmp://localhost:9987 (substituir o localhost pelo servidor e porta
   
 ### Greps
 
-- grep --color 'SLOW database activity' NemoSushi_0*.log.0|awk '{ print $12}'|sort -nr|more
-- grep 'stats' NemoSushi_0*.log.0|awk '{ print $5}'|grep -v 'time'|grep -v 'initLog'>NemoSushi_Stats.csv
+- grep --color 'SLOW database activity' Log_0*.log.0|awk '{ print $12}'|sort -nr|more
+- grep 'stats' Log_0*.log.0|awk '{ print $5}'|grep -v 'time'|grep -v 'initLog'>Log_Stats.csv
 Fazer grep de uma string1 e alterar para string2
 - grep -rl string1 <dir> | xargs sed -i 's/string1/string2/g'
 Apenas para ver a ocorrência
@@ -132,7 +132,7 @@ link simbólico
 - ln -sf _origem _destino
 
 ### JVM ARGS Exemplos
--Dcatalina.base="C:\workspace\pcopuma_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0" -Dcatalina.home="C:\dev\jws-3.0\share\apache-tomcat-8.0.18" -Dwtp.deploy="C:\workspace\pcopuma_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps" -Djava.endorsed.dirs="C:\dev\jws-3.0\share\apache-tomcat-8.0.18\endorsed" -Dspring.config.location="C:\dev\pcopuma\cfg\application.properties"   -Denvironment=DEV
+-Dcatalina.base="C:\workspace\proj_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0" -Dcatalina.home="C:\dev\jws-3.0\share\apache-tomcat-8.0.18" -Dwtp.deploy="C:\workspace\proj_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps" -Djava.endorsed.dirs="C:\dev\jws-3.0\share\apache-tomcat-8.0.18\endorsed" -Dspring.config.location="C:\dev\proj\cfg\application.properties"   -Denvironment=DEV
 
 ### Agile Coach Atlassian
 Link para um entendimento completo sobre scrum e agile
