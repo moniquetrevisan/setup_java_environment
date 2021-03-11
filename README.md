@@ -141,3 +141,12 @@ https://br.atlassian.com/agile/scrum
 Outras referências:
 https://www.scrumguides.org/scrum-guide.html 
 
+### idle.vbs
+Dim objResult
+
+Set objShell = WScript.CreateObject("WScript.Shell")
+
+Do While True
+  objResult = objShell.sendkeys("{NUMLOCK}{NUMLOCK}Z")
+  Wscript.Sleep(6000)
+Loop
