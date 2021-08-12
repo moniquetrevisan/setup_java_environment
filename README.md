@@ -4,7 +4,7 @@
 
 ### Organização dos arquivos
 - c:\dev\codes -> todos os códigos dos projetos (lugar onde daremos os git clones)
-- c:\dev\soft -> Instaladores e programas
+- c:\dev\soft  -> Instaladores e programas
   
 ### Java
 Fazer download dos pacotes do java, e para desenvolver, precisamos ter o runtime do Java (conhecido como jre) e também os pacotes de desenvolvedor que estão dentro da jdk (Java Development Kit) 
@@ -44,19 +44,7 @@ variáveis de ambiente
 
 ### GIT
 Para conseguirmos organizar os códigos, e fazer controle de versão vamos utilizar o git como ferramenta de controle de versão. Se você não sabe nada sobre isso, ou precisa de ajudar para configurar o git, eu aconselho muito que você assista esse curso do udacity: https://www.udacity.com/course/how-to-use-git-and-github--ud775 
-
-### IDE Eclipse
-Depois de termos o Java e o Maven na nossa máquina, vamos precisar de uma IDE para codificar. A mais utilizada comercialmente (de acordo com a minha experiência, claro) é o Eclipse.
-Existem várias versões e tipos de Eclipse, utilizaremos o Eclipse para programadores Java para Web Developers (Eclipse Java EE IDE for Web Developers.)
-A versão que estou utilizando é: Version: Oxygen.3a Release (4.7.3a) - caso seja do projeto Exygen pode fazer o download de alguma versão mais atual caso não encontre exatamente essa, sem problemas. 
-
-acertar a instalação do java e apontar sempre para a JDK
-- Preferences > Java > Installed JREs > Add... > caminho da sua JAVA_HOME
-acertar a configuração do maven para ele não usar o padrão dele
-- Preferences > Maven > Installations > Add... > caminho da sua M2_HOME
-- Preferences > Maven > User Settings > User Settings > Browse... > caminho M2_HOME\conf\settings.xml 
-- Preferences > Maven > User Settings > User Settings > Browse... > Update Settings 
-- Preferences > Maven > User Settings > User Settings > Browse... > Local Repository > Reindex 
+- Comando para atualizar o password armazenado: git config credential.helper store
 
 ### Clonar Projetos / Compilar código
 Abrir o GitBash e ir na pasta "c>dev>codes"
@@ -67,35 +55,10 @@ Executar os seguintes comandos para compilar o código (algum terminal: cmd, pow
 - $ mvn eclipse:clean (apaga os .project etc...limpa as referências dos objetos etc)
 - $ mvn eclipse:eclipse (ele recria as referências e ponteiros para navegação no código)
     
-### Configurar workspace no Eclipse
-Criar uma pasta workspace separada do código do projeto para evitar erros bizarros (!)
-Plugins
-- Eclipse Web Developer Tools
-- Eclipse XML Editors and Tools
-- STS (Spring Tools)
-- JAD ou algum decompilador
-Viadagens da cor - Opcional
-- Preferences > General > Editors > Text Editors > Line number foreground (cor dos números da linha)
-- Preferences > General > Editors > Text Editors > Current line highlight (cor da linha atual - gosto de (160,0,181))
-- Preferences > General > Editors > Text Editors > Annotations > Occurrences (140,240,120)
-- Preferences > General > Editors > Text Editors > Annotations > Search Results (160,240,180)
-- Preferences > General > Editors > Text Editors > Selecionar displayed tab width 4, highlight current line, show line numbers
-Importar os projetos
-- File > Import > Maven > Existing Maven Projects
-Arrumar a ordem dos pacotes (após o comando mvn eclipse:eclipse ele altera a ordem das pastas default)
-- Botão Direito no Projeto > Properties > Java Build Path > Order and Export > padrão geralmente usado:
-  - src/main/java
-  - src/main/resources
-  - src/test/java
-  - src/test/resources
-- Conferir se o projeto está marcado como maven - Botão Direito no projeto - se não aparecer a opção Maven logo de cara...
-  - Botão Direito > Configure > Convert to Maven Project
-
 -----------------------------------------------------------------------------------------------------------------------------------
 ## Comandos/Dicas Úteis 
 
 ### Conectar ao JConsole
-
 para conexão remota executar no cmd
 - C:\Development\Softwares\Java\jdk1.8.0_74\bin\jconsole.exe -J-Djava.class.path=%JAVA_HOME%\lib\jconsole.jar;%JAVA_HOME%\lib\tools.jar;C:\Development\jmxremote_optional-repackaged-4.1.1.jar
 
@@ -103,7 +66,6 @@ remote process
 service:jmx:jmxmp://localhost:9987 (substituir o localhost pelo servidor e porta que quer ver remoto)
   
 ### Greps
-
 - grep --color 'SLOW database activity' Log_0*.log.0|awk '{ print $12}'|sort -nr|more
 - grep 'stats' Log_0*.log.0|awk '{ print $5}'|grep -v 'time'|grep -v 'initLog'>Log_Stats.csv
 Fazer grep de uma string1 e alterar para string2
